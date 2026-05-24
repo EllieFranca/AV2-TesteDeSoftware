@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/child-reading-book_icon-icons.com_49243.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <title>Homepage</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Bree+Serif);
+
+        body{
+            background-color:#fbfcff;
+        }
+
+        #saudacao{
+            width: max-content;
+            justify-self: center;
+            margin-top: 100px;
+            padding: 40px;
+            font-family: 'Bree Serif';
+            border: solid 5px;
+            color: #6e3d93;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="saudacao"></h1>
+</body>
+<script>
+    let ListaUser = JSON.parse(localStorage.getItem("ListaUser"))
+    let nome = ListaUser[0].nomeCad
+    document.getElementById('saudacao').textContent = `Saudações, ${nome}!`
+    console.log(nome)
+</script>
+</html>
